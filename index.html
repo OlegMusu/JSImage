@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ледаче завантаження зображень</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/reset.css">
+</head>
+<body>
+    <h1>Ледаче завантаження та приховування зображень</h1>
+    <p>Прокрутіть сторінку, щоб побачити, як зображення з’являються та зникають</p>
+
+  <div class="image-container">
+    <ul class="image-list">
+        <li class="image-card">
+            <img data-src="https://avatars.mds.yandex.net/i?id=dc7361b95e9b0527c543cbb558a72055_l-5878560-images-thumbs&n=27&h=480&w=480" 
+            class="lazy-image">
+        </li>
+        <li class="image-card">
+            <img data-src="https://avatars.mds.yandex.net/i?id=bb6f43ed6751b908e678f9081d830a85_l-4821174-images-thumbs&n=27&h=480&w=480" 
+            class="lazy-image">
+        </li>
+        <li class="image-card">
+            <img data-src="data:image/jpeg;base64,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"
+            class="lazy-image">
+        </li>
+        <li class="image-card">
+            <img data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJRVnyvwbupGCCqE89a_HzSsjRSLjolbuUyA&s" 
+            class="lazy-image">
+        </li>
+        <li class="image-card">
+            <img data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThJ2YtvHcf3ZzL-kYlxvW0_XTpy8Dh0W7_aw&s" 
+            class="lazy-image">
+        </li>
+        <li class="image-card">
+            <img data-src="https://img.goodfon.ru/wallpaper/big/8/4e/badfon-full-hd-cvety-priroda-vesna.webp" 
+            class="lazy-image">
+        </li>
+        <li class="image-card">
+            <img data-src="https://png.pngtree.com/thumb_back/fh260/background/20210903/pngtree-sunflower-summer-flower-park-flower-viewing-photograph-with-picture-image_800938.jpg" 
+            class="lazy-image">
+        </li>
+        <li class="image-card">
+            <img data-src="https://cdn.fishki.net/upload/post/2021/02/16/3613245/tn/alberta-2297204-1280.jpg" 
+            class="lazy-image">
+        </li>
+        <li class="image-card">
+            <img data-src="https://st.depositphotos.com/1695227/4813/i/450/depositphotos_48132517-stock-photo-deep-forest-stream-with-crystal.jpg"
+            class="lazy-image">
+        </li>
+        <li class="image-card">
+            <img data-src="https://img.freepik.com/free-photo/mountains-lake_1398-1150.jpg?semt=ais_hybrid&w=740&q=80"
+            class="lazy-image">
+        </li>
+        <li class="image-card">
+            <img data-src="https://www.atorus.ru/sites/default/files/styles/head_carousel/public/2021-09/2f6392.jpg.webp?itok=8kThFMY0"
+            class="lazy-image">
+        </li>
+        <li class="image-card">
+            <img data-src="https://lh3.googleusercontent.com/proxy/D19nmcl_oCa_PpEFKUxA4ithdQW_m3sH21_L2FafBF72qLCB906veW8eJxDBgrPU-QbZjlHL6LKOZDwLSv446ggeNY0hQknCWGNilkJf9w"
+            class="lazy-image">
+        </li>
+    </ul>
+  </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
