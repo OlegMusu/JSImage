@@ -1,23 +1,10 @@
-const lazyImages = document.querySelectorAll('img[data-src]');
-const observer = new IntersectionObserver((entries) => {
+const element = document.querySelector(".item");
+const onEntry = (entries, observer) => {
     entries.forEach(entry => {
-        const img = entry.target;
-        if (entry.isIntersecting) {
-            if (!img.src) {
-                img.src = img.dataset.src;
-            }
-            img.classList.add('visible');
-        } 
-        else {
-            // це для того щоб картинки могли пропадати коли ти гортаєш до низу
-            img.classList.remove('visible'); 
-        }
+        if(entry.isIntersecting){
+            entry.target.classList.add("modified")
+        };
     });
-}, {
-    root: null,
-    threshold: 0.3
-});
-
-lazyImages.forEach(img => {
-    observer.observe(img);
-});
+};
+const observer = new IntersectionObserver(onEntry);
+observer.observe(element)
